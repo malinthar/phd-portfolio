@@ -1,0 +1,140 @@
+// Header & Navigation
+.site-nav {
+  background-color: $card-background;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: $spacing-md 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $secondary-color;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    
+    li {
+      margin-left: $spacing-md;
+    }
+    
+    a {
+      color: $secondary-color;
+      font-weight: 500;
+      
+      &:hover, &.active {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Profile Section
+.profile-section {
+  padding: $spacing-xl 0;
+  background-color: $light-gray;
+  
+  .profile-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: $spacing-md;
+    border: 5px solid $card-background;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .subtitle {
+    color: $dark-gray;
+    font-size: 1.2rem;
+    margin-bottom: $spacing-md;
+  }
+  
+  .social-links {
+    margin-top: $spacing-md;
+    
+    a {
+      font-size: 1.5rem;
+      margin: 0 $spacing-sm;
+      color: $secondary-color;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Projects Section
+.projects-section {
+  padding: $spacing-xl 0;
+  background-color: $background-color;
+}
+
+// Footer
+.site-footer {
+  background-color: $secondary-color;
+  color: $card-background;
+  padding: $spacing-xl 0 $spacing-md;
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: $spacing-lg;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: $spacing-md;
+    
+    h3 {
+      color: $card-background;
+      margin-bottom: $spacing-md;
+      position: relative;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+    }
+  }
+  
+  .social-links a {
+    color: $card-background;
+    font-size: 1.3rem;
+    margin-right: $spacing-md;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  .copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: $spacing-md;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+  }
+}

@@ -1,0 +1,54 @@
+// Mobile styles
+@media (max-width: $mobile) {
+  .site-nav {
+    .container {
+      flex-direction: column;
+    }
+    
+    .site-title {
+      margin-bottom: $spacing-sm;
+    }
+    
+    .nav-links {
+      margin-top: $spacing-sm;
+      
+      li {
+        margin-left: $spacing-sm;
+        margin-right: $spacing-sm;
+      }
+    }
+  }
+  
+  .profile-section {
+    .profile-image {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    
+    .footer-section {
+      margin-bottom: $spacing-lg;
+    }
+  }
+}
+
+// Tablet styles
+@media (max-width: $tablet) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .footer-content {
+    gap: $spacing-lg;
+  }
+}
+
+// Desktop styles
+@media (max-width: $desktop) {
+  .container {
+    padding: 0 $spacing-lg;
+  }
+}

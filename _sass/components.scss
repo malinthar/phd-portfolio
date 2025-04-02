@@ -1,0 +1,127 @@
+// Project Card
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-lg;
+}
+
+.project-card {
+  background-color: $card-background;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: $spacing-lg;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+  
+  h3, h4 {
+    margin-bottom: $spacing-md;
+    
+    a {
+      color: $heading-color;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: $spacing-md;
+    font-weight: 500;
+    position: relative;
+    
+    &:after {
+      content: '→';
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover:after {
+      transform: translateX(5px);
+    }
+  }
+}
+
+// Project Content
+.project-header {
+  background-color: $secondary-color;
+  color: $card-background;
+  padding: $spacing-xl 0;
+  margin-bottom: $spacing-lg;
+  
+  h1 {
+    color: $card-background;
+    margin-bottom: 0;
+  }
+}
+
+.project-content {
+  padding: $spacing-lg 0 $spacing-xl;
+  
+  h2 {
+    margin-top: $spacing-lg;
+    margin-bottom: $spacing-md;
+  }
+  
+  img {
+    border-radius: 8px;
+    margin: $spacing-md 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  ul, ol {
+    margin-left: $spacing-lg;
+    margin-bottom: $spacing-md;
+  }
+}
+
+.related-projects {
+  background-color: $light-gray;
+  padding: $spacing-xl 0;
+  
+  h3 {
+    text-align: center;
+    margin-bottom: $spacing-lg;
+  }
+}
+
+// Button Styles
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: $primary-color;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  &.btn-secondary {
+    background-color: $secondary-color;
+    
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+  
+  &.btn-outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+}
