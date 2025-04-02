@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+<div class="profile-section">
+    <div class="profile-container">
+        <img src="{{ site.baseurl }}/assets/images/profile-photo.jpg" alt="Profile Photo" class="profile-image">
+        <h1>Your Name</h1>
+        <p class="subtitle">PhD Candidate in [Your Field]</p>
+        <div class="social-links">
+            <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</div>
+
+<section class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Research Projects</h2>
+        <div class="projects-grid">
+            {% for project in site.projects %}
+            <div class="project-card">
+                <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+                <p>{{ project.excerpt }}</p>
+                <a href="{{ project.url | relative_url }}" class="read-more">Read More</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

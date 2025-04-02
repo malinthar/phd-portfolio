@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="project-header">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+    </div>
+</div>
+
+<div class="project-content">
+    <div class="container">
+        {{ content }}
+    </div>
+</div>
+
+<div class="related-projects">
+    <div class="container">
+        <h3>Other Projects</h3>
+        <div class="projects-grid">
+            {% for project in site.projects %}
+                {% if project.url != page.url %}
+                <div class="project-card">
+                    <h4><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h4>
+                    <p>{{ project.excerpt }}</p>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

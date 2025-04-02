@@ -1,0 +1,25 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>{{ site.title }}</h3>
+                <p>{{ site.description }}</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: {{ site.email }}</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow</h3>
+                <div class="social-links">
+                    <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; {{ 'now' | date: "%Y" }} Your Name. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

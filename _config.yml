@@ -1,0 +1,22 @@
+title: PhD Portfolio
+email: your-email@example.com
+description: >-
+  My academic portfolio showcasing PhD research and projects.
+baseurl: "/phd-portfolio" # The subpath of your site, e.g. /blog
+url: "" # The base hostname & protocol for your site, e.g. http://example.com
+
+# Social media profiles
+github_username: your-username
+linkedin_username: your-username
+twitter_username: your-username
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  projects:
+    output: true

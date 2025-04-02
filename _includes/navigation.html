@@ -1,0 +1,12 @@
+<nav class="site-nav">
+    <div class="container">
+        <a href="{{ site.baseurl }}/" class="site-title">{{ site.title }}</a>
+        <ul class="nav-links">
+            <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
+            <li><a href="{{ site.baseurl }}/projects" {% if page.url contains "/projects" %}class="active"{% endif %}>Projects</a></li>
+            <li><a href="{{ site.baseurl }}/publications" {% if page.url == "/publications" %}class="active"{% endif %}>Publications</a></li>
+            <li><a href="{{ site.baseurl }}/about" {% if page.url == "/about" %}class="active"{% endif %}>About</a></li>
+            <li><a href="{{ site.baseurl }}/contact" {% if page.url == "/contact" %}class="active"{% endif %}>Contact</a></li>
+        </ul>
+    </div>
+</nav>
