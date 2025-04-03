@@ -1,8 +1,8 @@
 ---
 layout: project
-title: PhD Project Title
-excerpt: A brief description of your PhD project, highlighting its significance and objectives.
-image: /assets/images/projects/phd-project.jpg
+title: AI Driven Flood Inundation Modelling
+excerpt: Rapid flood inundation modelling using AI models
+image: /assets/images/projects/inundation_project.png
 ---
 
 # PhD Project Title
