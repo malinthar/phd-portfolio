@@ -2,7 +2,7 @@
 layout: project
 title: AI Driven Flood Inundation Modelling
 excerpt: Rapid flood inundation modelling using AI models
-image: /assets/images/projects/inundation_project.png
+image: inundation_project.png
 ---
 
 # PhD Project Title

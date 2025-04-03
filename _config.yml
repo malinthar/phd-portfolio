@@ -1,7 +1,7 @@
 title: PhD Portfolio
 email: your-email@example.com
 description: >-
-  My academic portfolio showcasing PhD research and projects.
+  My academic portfolio showcasing PhD research and projects in Artificial Intelligence.
 baseurl: "/phd-portfolio" # The subpath of your site, e.g. /blog
 url: "" # The base hostname & protocol for your site, e.g. http://example.com
 
@@ -20,3 +20,29 @@ plugins:
 collections:
   projects:
     output: true
+    permalink: /projects/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/
+
+# Default layouts for different collection types
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

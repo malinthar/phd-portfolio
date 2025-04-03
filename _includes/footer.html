@@ -1,20 +1,34 @@
 <footer class="site-footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <p>Email: {{ malintha.mahindakumarage.1@uni.massey.ac.nz }}</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow</h3>
-                <div class="social-links">
-                    <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About</h3>
+        <p>PhD Candidate focused on Artificial Intelligence research.</p>
+        <div class="social-links">
+          {% if site.github_username %}
+          <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i></a>
+          {% endif %}
+          {% if site.linkedin_username %}
+          <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+          {% endif %}
+          {% if site.twitter_username %}
+          <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fab fa-twitter"></i></a>
+          {% endif %}
         </div>
-        <div class="copyright">
-            <p>&copy; {{ 'now' | date: "%Y" }} Malintha Ranasinghe. All rights reserved.</p>
-        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>
+          {% if site.email %}
+          <i class="far fa-envelope"></i> {{ site.email }}<br>
+          {% endif %}
+          <i class="fas fa-map-marker-alt"></i> University Department<br>
+          <i class="fas fa-university"></i> Your University
+        </p>
+      </div>
     </div>
+    <div class="copyright">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </div>
 </footer>

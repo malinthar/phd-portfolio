@@ -7,14 +7,34 @@
 
 .project-card {
   background-color: $card-background;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  padding: $spacing-lg;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  }
+  
+  .project-image {
+    height: 180px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+  
+  &:hover .project-image img {
+    transform: scale(1.05);
+  }
+  
+  .project-content {
+    padding: $spacing-lg;
   }
   
   h3, h4 {
@@ -32,8 +52,10 @@
   .read-more {
     display: inline-block;
     margin-top: $spacing-md;
-    font-weight: 500;
+    font-weight: 600;
+    color: $primary-color;
     position: relative;
+    padding-right: 10px;
     
     &:after {
       content: '→';
@@ -44,6 +66,46 @@
     &:hover:after {
       transform: translateX(5px);
     }
+  }
+}
+
+// Publications Section
+.publications-section {
+  background-color: $light-gray;
+  padding: $spacing-xl 0;
+}
+
+.publication-item {
+  background-color: $card-background;
+  border-radius: 12px;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  
+  h3 {
+    margin-bottom: $spacing-sm;
+  }
+  
+  .authors {
+    color: $dark-gray;
+    margin-bottom: $spacing-sm;
+    font-style: italic;
+  }
+  
+  .venue {
+    font-weight: 600;
+    color: $secondary-color;
+    margin-bottom: $spacing-md;
+  }
+  
+  .publication-links {
+    display: flex;
+    gap: $spacing-sm;
+  }
+  
+  .btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -66,6 +128,8 @@
   h2 {
     margin-top: $spacing-lg;
     margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $light-gray;
   }
   
   img {
@@ -96,14 +160,17 @@
   padding: 0.7rem 1.5rem;
   background-color: $primary-color;
   color: white;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  text-align: center;
   
   &:hover {
     background-color: darken($primary-color, 10%);
     color: white;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
   &.btn-secondary {
@@ -122,6 +189,22 @@
     &:hover {
       background-color: $primary-color;
       color: white;
+    }
+  }
+}
+
+// Profile bio and CTA buttons
+.profile-container {
+  .bio {
+    max-width: 600px;
+    margin: 0 auto $spacing-lg auto;
+  }
+  
+  .cta-buttons {
+    margin-bottom: $spacing-md;
+    
+    .btn {
+      margin: 0 $spacing-sm;
     }
   }
 }

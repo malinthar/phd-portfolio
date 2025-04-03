@@ -4,28 +4,69 @@ title: Home
 ---
 <div class="profile-section">
     <div class="profile-container">
-        <img src="{{ site.baseurl }}/assets/images/profile_photo.jpeg" alt="Profile Photo" class="profile-image">
-        <h1>Your Name</h1>
-        <p class="subtitle">PhD Candidate in Artifical Intelligence</p>
+        <img src="{{ site.baseurl }}/assets/images/profile_photo.jpg" alt="Profile Photo" class="profile-image">
+        <h1>Malintha Ranasinghe</h1>
+        <p class="subtitle">PhD Candidate in Artificial Intelligence</p>
+        <p class="bio">I'm a researcher focused on developing novel machine learning techniques for [your specific research area]. Currently working on projects related to [specific topics].</p>
+        <div class="cta-buttons">
+            <a href="{{ site.baseurl }}/assets/files/cv.pdf" class="btn" target="_blank">Download CV</a>
+            <a href="{{ site.baseurl }}/about/" class="btn btn-outline">More About Me</a>
+        </div>
         <div class="social-links">
-            <a href="https://github.com/{{ site.github_username }}" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/malinthar" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/malintharanasinghe" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://medium.com/@malintha1996" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
 </div>
 
 <section class="projects-section">
     <div class="container">
-        <h2 class="section-title">Research Projects</h2>
+        <h2 class="section-title">Research Project Components</h2>
         <div class="projects-grid">
             {% for project in site.projects %}
             <div class="project-card">
-                <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-                <p>{{ project.excerpt }}</p>
-                <a href="{{ project.url | relative_url }}" class="read-more">Read More</a>
+                {% if project.image %}
+                <div class="project-image">
+                    <img src="{{ site.baseurl }}/assets/images/projects/{{ project.image }}" alt="{{ project.title }}">
+                </div>
+                {% endif %}
+                <div class="project-content">
+                    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+                    <p>{{ project.excerpt }}</p>
+                    <a href="{{ project.url | relative_url }}" class="read-more">Read More</a>
+                </div>
             </div>
             {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="publications-section">
+    <div class="container">
+        <h2 class="section-title">Recent Publications</h2>
+        <div class="publications-list">
+            <div class="publication-item">
+                <h3>Paper Title Goes Here</h3>
+                <p class="authors">Your Name, Co-author Name, Another Co-author</p>
+                <p class="venue">Journal or Conference Name, 2023</p>
+                <div class="publication-links">
+                    <a href="#" class="btn btn-sm">PDF</a>
+                    <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    <a href="#" class="btn btn-sm btn-outline">BibTeX</a>
+                </div>
+            </div>
+            
+            <div class="publication-item">
+                <h3>Another Paper Title Goes Here</h3>
+                <p class="authors">Your Name, Co-author Name</p>
+                <p class="venue">Journal or Conference Name, 2022</p>
+                <div class="publication-links">
+                    <a href="#" class="btn btn-sm">PDF</a>
+                    <a href="#" class="btn btn-sm btn-outline">Code</a>
+                    <a href="#" class="btn btn-sm btn-outline">BibTeX</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
